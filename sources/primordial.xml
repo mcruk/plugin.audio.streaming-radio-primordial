@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<source>
+	<stream bitrate="128">http://stream.primordialradio.com/proxy/primordial?mp=/stream%3Fname=</stream>
+	<name>Primordial</name>
+	<tagline>The Evolution of Rock And Metal Radio</tagline>
+	<description>Primordial Radio is a British premium online radio platform specialising in rock and metal music.</description>
+	<genre>Rock</genre>
+	<fanart>fanart.png</fanart>
+	<thumb>thumb.jpg</thumb>
+	<scraper type="mcr">
+		<url>https://mobile-computer-repairs.co.uk</url>
+		<delay>0</delay>
+	</scraper>
+</source>
