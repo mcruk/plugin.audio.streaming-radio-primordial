@@ -366,11 +366,13 @@ while count < 5 and checkInternet is not True:
     count += 1
     
 if checkInternet:
-    cleanUpOld = DBAddonCache().fetchAll()
-    if cleanUpOld:
+    try:
+        cleanUpOld = DBAddonCache().fetchAll()
         DBKodiCache().fetchAllLoop(cleanUpOld)
         DBAddonCache().dropAll()
-        DBAddonCache().create()
+    except: pass
+    
+    DBAddonCache().create()
 
     RadioSource('primordial').play()   
         
