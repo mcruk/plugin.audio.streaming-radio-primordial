@@ -196,7 +196,7 @@ class RadioInfo():
     def get_gigs(self):
         try:          
             payload = {'artist': self.info["artist"]}
-            response = requests.get("http://mobile-computer-repairs.co.uk/apis/primordial/getGig.php", params = payload)            
+            response = requests.get("https://mobile-computer-repairs.co.uk/apis/primordial/getGig.php", params = payload)            
             if response.status_code == 200: 
                 dataReturn = response.json()
                 if "ticket" in dataReturn: 
@@ -225,7 +225,7 @@ class RadioInfo():
             self.info["oldThumb"] = self.info["thumb"]
             
         try:
-            url = 'http://mobile-computer-repairs.co.uk/apis/primordial/getInfo.php?'    
+            url = 'https://mobile-computer-repairs.co.uk/apis/primordial/getInfo.php?'    
             payload = (('artist', self.info["artist"]), ('track', self.info["title"]))
             response = requests.get("https://mobile-computer-repairs.co.uk/apis/primordial/getInfo.php", params = payload)   
             if response.status_code == 200: 
