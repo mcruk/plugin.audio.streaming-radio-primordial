@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.audio.streaming-radio-primordial" name="Primordial Radio" provider-name="Mobile Computer Repairs" version="0.0.5">
+<addon id="plugin.audio.streaming-radio-primordial" name="Primordial Radio" provider-name="Mobile Computer Repairs" version="0.0.6">
 	<requires>
 		<import addon="xbmc.python" version="2.1.0"/>
 		<import addon="script.module.requests" version="2.9.1"/>
 		<import addon="script.module.beautifulsoup4" version="4.3.0"/>
 	</requires>
-	<extension library="addon.py" point="xbmc.python.pluginsource">
+	<extension library="addon.py" point="xbmc.addon.audio">
 		<provides>audio</provides>
 	</extension>
 	<extension point="xbmc.addon.metadata">
@@ -28,7 +28,7 @@
 			<fanart>resources/media/fanart.jpg</fanart>
 		</assets>
 	</extension>
-	<extension point="xbmc.addon.repository">
+	<extension point="xbmc.addon.audio">
 		<info>https://mobile-computer-repairs.co.uk/repo/addons.xml</info>
 		<checksum>https://mobile-computer-repairs.co.uk/repo/addons.xml.md5</checksum>
 		<datadir zip="true">https://mobile-computer-repairs.co.uk/repo/repository/</datadir>
