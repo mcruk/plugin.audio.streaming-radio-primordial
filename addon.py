@@ -62,16 +62,12 @@ class RadioSource():
         if addon.getSetting("bitrate") == "Maximum":
             if self.name == 'Primordial':
                 self.stream_url = self.streams[max(self.streams.keys())] + self.userName    
-            else:
-                self.stream_url = self.streams[max(self.streams.keys())]
         else:
             if self.name == 'Primordial':
-                self.stream_url = self.streams[max(self.streams.keys())] + self.userName
-            else:
                 max_bitrate = int(addon.getSetting("bitrate").split(" ")[0])
                 bitrates = [bitrate for bitrate in self.streams.keys() if bitrate <= max_bitrate]
-                self.stream_url = (self.streams[min(self.streams.keys())]
-                                   if len(bitrates) == 0 else self.streams[max(bitrates)])
+                self.stream_url = (self.streams[min(self.streams.keys())] + self.userName
+                    if len(bitrates) == 0 else self.streams[max(bitrates)] + self.userName)
 
         # Create list item with stream URL and send to Kodi
             
