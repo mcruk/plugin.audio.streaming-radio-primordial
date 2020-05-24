@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <settings>
 	<category>
-		<setting id="bitrate" label="30001" type="labelenum" values="Maximum|128 kb/s|64 kb/s|32 kb/s" default="Maximum"/>
+		<setting id="bitrate" label="30001" type="labelenum" values="Maximum|128 kb/s|80 kb/s" default="Maximum"/>
 		<setting id="username" label="30002" type="text" default="paulmichael1084"/>
 		<setting id="getartwork" label="30003" type="bool" default="true"/>
 		<setting id="getgigs" label="30004" type="bool" default="true"/>
